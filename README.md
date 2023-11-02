@@ -32,6 +32,12 @@ UrlShortener.Link.get_shorten_link(pid)
 "http://localhost/74Vn4j3"
 ```
 
+Queremos poder crear mas de una url acortada para una misma url, y posteriormente poder obtener, para dicha url, una lista con todas sus correspondientes urls acortadas.
+
+```elixir
+"https://example.com/aftermath.html" -> ["http://localhost/74Vn4j3", "http://localhost/najqnww3813"]
+```
+
 ## Requerimientos
 
 ### Parte 1

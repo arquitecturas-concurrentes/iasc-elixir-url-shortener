@@ -42,11 +42,9 @@ Queremos poder crear mas de una url acortada para una misma url, y posteriorment
 
 ### Parte 1
 
-1. Queremos poder mantener, para cada url, una lista de sus correspondientes urls acortadas, en vez de tener solo una url acortada por `UrlShortener.Link`. Es decir que una url determinada, si se trata de acortarlo mas de una vez, genere dos urls acortadas que estaran en esta lista.
+1. Queremos que si crashea o muere un actor `UrlShortener.Link` no se pierdan las urls acortadas que ya fueron generadas. 
 
-2. Queremos que si crashea o muere un actor `UrlShortener.Link` no se pierdan las urls acortadas que ya fueron generadas. 
-
-3. Por medio de `libcluster`, interconectar un cluster de nodos. Los nodos pueden crearse manualmente.
+2. Por medio de `libcluster`, interconectar un cluster de nodos. Los nodos pueden crearse manualmente.
 
 > Una forma de comprobar de que esto funciona correctamente es que que se puedan ver la lista de nodos. Esto se puede verificar en cualquier nodo del cluster corriendo:
 
@@ -54,7 +52,7 @@ Queremos poder crear mas de una url acortada para una misma url, y posteriorment
 Node.list([:this, :visible])
 ```
 
-4. Distribuir el estado de la aplicacion de forma que, al acortar varias urls, no todas estén almacenadas en el mismo nodo. Por ahora no nos centraremos en la _replicación_, solo nos interesa _particionar_ el estado entre los nodos del cluster.
+3. Distribuir el estado de la aplicacion de forma que, al acortar varias urls, no todas estén almacenadas en el mismo nodo. Por ahora no nos centraremos en la _replicación_, solo nos interesa _particionar_ el estado entre los nodos del cluster.
 
 > Nota: Se puede utilizar `horde`, aunque no es necesario para resolver esto, ya que pueden hacerlo manualmente.
 

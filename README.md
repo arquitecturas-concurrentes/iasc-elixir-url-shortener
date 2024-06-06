@@ -56,7 +56,7 @@ Node.list([:this, :visible])
 
 > Nota: Se puede utilizar `horde`, aunque no es necesario para resolver esto, ya que pueden hacerlo manualmente.
 
-### Parte 2
+### Parte 2 (Extra)
 
 1. Implementar un esquema _primary/secondary_, donde el estado de cada link se replique en todos los demás nodos, sabiendo cuál es el nodo principal que contiene el estado.
 

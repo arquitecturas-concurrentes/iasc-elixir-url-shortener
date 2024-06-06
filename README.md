@@ -42,7 +42,7 @@ Queremos poder crear mas de una url acortada para una misma url, y posteriorment
 
 ### Parte 1
 
-1. Queremos poder mantener, para cada url, una lista de sus correspondientes urls acortadas, en vez de tener solo una url acortada por `UrlShortener.Link`.
+1. Queremos poder mantener, para cada url, una lista de sus correspondientes urls acortadas, en vez de tener solo una url acortada por `UrlShortener.Link`. Es decir que una url determinada, si se trata de acortarlo mas de una vez, genere dos urls acortadas que estaran en esta lista.
 
 2. Queremos que si crashea o muere un actor `UrlShortener.Link` no se pierdan las urls acortadas que ya fueron generadas. 
 

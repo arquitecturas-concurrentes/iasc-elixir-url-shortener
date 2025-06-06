@@ -5,7 +5,7 @@ defmodule Iascurlshortener.MixProject do
     [
       app: :iascurlshortener,
       version: "0.1.0",
-      elixir: "~> 1.15",
+      elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -22,8 +22,8 @@ defmodule Iascurlshortener.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:libcluster, "~> 3.3"},
-      {:horde, "~> 0.8.3"}
+      {:libcluster, "~> 3.5"},
+      {:horde, "~> 0.9.0"}
     ]
   end
 end

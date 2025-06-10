@@ -47,7 +47,7 @@ defmodule UrlShortener.Link do
     {:reply, "#{get_domain_basename()}/#{shortened_url}", state}
   end
 
-  def handle_cast(:regenerate_shortened_url, state) do
+  def handle_cast(:regenerate_shortened_url, _state) do
     updated_state = %__MODULE__{ shortened_url: generate() }
 
     {:noreply, updated_state}

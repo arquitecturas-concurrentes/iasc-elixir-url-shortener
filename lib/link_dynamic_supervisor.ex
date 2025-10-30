@@ -11,7 +11,7 @@ defmodule UrlShortener.LinkDynamicSupervisor do
 
   def start_child(child_name, url) do
     #Ejemplo para agregar stack:
-    #{:ok, pid} = UrlShortener.LinkDynamicSupervisor.start_child(ExmpleComAftermath, "https://example.com/aftermath.html")
+    #{:ok, pid} = UrlShortener.LinkDynamicSupervisor.start_child("ExmpleComAftermath", "https://example.com/aftermath.html")
     spec = {UrlShortener.Link, {child_name, url} }
     DynamicSupervisor.start_child(__MODULE__, spec)
   end
